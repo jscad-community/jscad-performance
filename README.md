@@ -17,6 +17,7 @@ This will install the required libraries, including the latest V1 version of the
 At this time (2019-07), the V2 version of the CSG library is not available. So, you will have to do the following.
 
 cd testsV2
+
 git clone https://github.com/jscad/csg.js.git
 
 # Execution
@@ -24,6 +25,7 @@ git clone https://github.com/jscad/csg.js.git
 If you are ready then use these commands to initiate the performance suites.
 
 node --expose_gc --always_compact ./performanceV1.js
+
 node --expose_gc --always_compact ./performanceV2.js
 
 As always, performance is RELATIVE so these need to be completed on the SAME MACHINE.
