@@ -6,7 +6,7 @@ const roundedCylinders = require('./roundedCylinders.js')
 const roundedCubes = require('./roundedCubes.js')
 const spheres = require('./spheres.js')
 
-const allExports = Object.assign({}, arcs, circles, cylinders, roundedCylinders, roundedCubes, spheres)
+//const allExports = Object.assign({}, arcs, circles, cylinders, roundedCylinders, roundedCubes, spheres)
 
 // measurements
 const measureArea = require('./measureArea')
@@ -21,5 +21,11 @@ const subtract = require('./subtract')
 const union = require('./union')
 
 //const allExports = Object.assign({}, intersect, subtract, union)
+
+// transforms
+const center = require('./center')
+const transforms = require('./transforms')
+
+const allExports = Object.assign({}, center, transforms)
 
 module.exports = allExports
