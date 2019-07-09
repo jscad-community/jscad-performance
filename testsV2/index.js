@@ -13,7 +13,6 @@ const measureArea = require('./measureArea')
 const measureBounds = require('./measureBounds')
 const measureVolume = require('./measureVolume')
 
-const allExports = Object.assign({}, measureBounds)
 //const allExports = Object.assign({}, measureArea, measureBounds, measureVolume)
 
 // booleans
@@ -22,5 +21,11 @@ const subtract = require('./subtract')
 const union = require('./union')
 
 //const allExports = Object.assign({}, intersect, subtract, union)
+
+// transforms
+const center = require('./center')
+const transforms = require('./transforms')
+
+const allExports = Object.assign({}, center, transforms)
 
 module.exports = allExports
