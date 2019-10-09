@@ -26,6 +26,11 @@ const union = require('./union')
 const center = require('./center')
 const transforms = require('./transforms')
 
-const allExports = Object.assign({}, center, transforms)
+//const allExports = Object.assign({}, center, transforms)
+
+// hulls
+const hull = require('./hull')
+
+const allExports = Object.assign({}, hull)
 
 module.exports = allExports
