@@ -46,7 +46,7 @@ module.exports = {
   sphere_12,
   sphere_36,
   sphere_72,
-  sphere_144
-//  sphere_360
+  sphere_144,
+  sphere_360,
 //  sphere_720
 }

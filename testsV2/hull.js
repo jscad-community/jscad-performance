@@ -31,7 +31,7 @@ var sphere_224 = null // 99904 points X centers
 
 // number of points ['100', '1000', '10000', '100000', '200000', '400000']
 
-const setupArea = {
+const setupHull = {
   name : 'hull setup',
   api  : 'setup',
   div  : '0',
@@ -96,7 +96,8 @@ const hull_sphere_100000 = {
 }
 
 module.exports = {
-  setupArea,
+  setupHull,
+
   hull_circle_100,
   hull_circle_1000,
   hull_circle_10000,

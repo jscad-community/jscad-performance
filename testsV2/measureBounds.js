@@ -10,6 +10,7 @@ var arc_796 = null // 400 points
 var circle_10 = null // 10 points
 var circle_100 = null // 100 points
 var circle_1000 = null // 1000 points
+var circle_10000 = null // 10000 points
 
 var sphere_7 = null // 98 points
 var sphere_22 = null // 1012 points
@@ -30,6 +31,7 @@ const setupBounds = {
     circle_10 = circle({radius: 100, segments: 10})
     circle_100 = circle({radius: 100, segments: 100})
     circle_1000 = circle({radius: 100, segments: 1000})
+    circle_10000 = circle({radius: 100, segments: 10000})
 
     sphere_7 = sphere({radius: 100, segments: 7})
     sphere_22 = sphere({radius: 100, segments: 22})
@@ -59,6 +61,13 @@ const measureBounds_circle_1000 = {
   api  : 'measureBounds(circle)',
   div  : '1000',
   func : function runme() { return measureBounds(circle_1000) }
+}
+
+const measureBounds_circle_10000 = {
+  name : 'measureBounds(10000)',
+  api  : 'measureBounds(circle)',
+  div  : '10000',
+  func : function runme() { return measureBounds(circle_10000) }
 }
 
 const measureBounds_sphere_100 = {
@@ -98,12 +107,15 @@ const measureBounds_sphere_100000 = {
 
 module.exports = {
   setupBounds,
+
   measureBounds_circle_10,
   measureBounds_circle_100,
   measureBounds_circle_1000,
+  measureBounds_circle_10000,
+
   measureBounds_sphere_100,
   measureBounds_sphere_1000,
   measureBounds_sphere_10000,
   measureBounds_sphere_100000,
-  measureBounds_sphere_50000
+  //measureBounds_sphere_50000
 }

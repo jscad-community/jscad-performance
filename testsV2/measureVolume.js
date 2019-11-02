@@ -59,9 +59,10 @@ const measureVolume_sphere_100000 = {
 
 module.exports = {
   setupVolume,
+
   measureVolume_sphere_100,
   measureVolume_sphere_1000,
   measureVolume_sphere_10000,
   measureVolume_sphere_100000,
-  measureVolume_sphere_50000
+  //measureVolume_sphere_50000
 }

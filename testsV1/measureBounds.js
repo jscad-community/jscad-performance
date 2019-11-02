@@ -8,14 +8,13 @@ var arc_796 = null // 400 points
 var circle_10 = null // 10 points
 var circle_100 = null // 100 points
 var circle_1000 = null // 1000 points
+var circle_10000 = null // 10000 points
 
 var sphere_7 = null // 98 points
 var sphere_22 = null // 1012 points
 var sphere_70 = null // 9940 points
 var sphere_158 = null // 50244 points
 var sphere_224 = null // 99904 points
-
-// number of points ['100', '1000', '10000', '100000', '200000', '400000']
 
 const setupBounds = {
   name : 'measurements setup',
@@ -30,6 +29,7 @@ const setupBounds = {
     circle_10 = CAG.circle({radius: 100, resolution: 10})
     circle_100 = CAG.circle({radius: 100, resolution: 100})
     circle_1000 = CAG.circle({radius: 100, resolution: 1000})
+    circle_10000 = CAG.circle({radius: 100, resolution: 10000})
 
     sphere_7 = CSG.sphere({radius: 100, resolution: 7})
     sphere_22 = CSG.sphere({radius: 100, resolution: 22})
@@ -59,6 +59,13 @@ const measureBounds_circle_1000 = {
   api  : 'measureBounds(circle)',
   div  : '1000',
   func : function runme() { return circle_1000.getBounds() }
+}
+
+const measureBounds_circle_10000 = {
+  name : 'measureBounds(10000)',
+  api  : 'measureBounds(circle)',
+  div  : '10000',
+  func : function runme() { return circle_10000.getBounds() }
 }
 
 const measureBounds_sphere_100 = {
@@ -101,9 +108,10 @@ module.exports = {
   measureBounds_circle_10,
   measureBounds_circle_100,
   measureBounds_circle_1000,
+  measureBounds_circle_10000,
   measureBounds_sphere_100,
   measureBounds_sphere_1000,
   measureBounds_sphere_10000,
   measureBounds_sphere_100000,
-  measureBounds_sphere_50000
+  //measureBounds_sphere_50000
 }

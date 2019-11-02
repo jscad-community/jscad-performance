@@ -48,5 +48,5 @@ module.exports = {
   circle_72,
   circle_144,
   circle_360,
-  circle_720
+  //circle_720
 }

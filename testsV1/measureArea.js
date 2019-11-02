@@ -3,6 +3,7 @@ const {CSG, CAG} = require('@jscad/csg');
 var circle_10 = null // 10 points
 var circle_100 = null // 100 points
 var circle_1000 = null // 1000 points
+var circle_10000 = null // 10000 points
 
 var sphere_7 = null // 98 points
 var sphere_22 = null // 1012 points
@@ -20,6 +21,7 @@ const setupArea = {
     circle_10 = CAG.circle({radius: 100, resolution: 10})
     circle_100 = CAG.circle({radius: 100, resolution: 100})
     circle_1000 = CAG.circle({radius: 100, resolution: 1000})
+    circle_10000 = CAG.circle({radius: 100, resolution: 10000})
 
     sphere_7 = CSG.sphere({radius: 100, resolution: 7})
     sphere_22 = CSG.sphere({radius: 100, resolution: 22})
@@ -49,6 +51,13 @@ const measureArea_circle_1000 = {
   api  : 'measureArea(circle)',
   div  : '1000',
   func : function runme() { return circle_1000.area() }
+}
+
+const measureArea_circle_10000 = {
+  name : 'measureArea(10000)',
+  api  : 'measureArea(circle)',
+  div  : '10000',
+  func : function runme() { return circle_10000.area() }
 }
 
 const measureArea_sphere_100 = {
@@ -91,9 +100,10 @@ module.exports = {
   measureArea_circle_10,
   measureArea_circle_100,
   measureArea_circle_1000,
+  measureArea_circle_10000,
   measureArea_sphere_100,
   measureArea_sphere_1000,
   measureArea_sphere_10000,
   measureArea_sphere_100000,
-  measureArea_sphere_50000
+  //measureArea_sphere_50000
 }

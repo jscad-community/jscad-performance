@@ -48,5 +48,5 @@ module.exports = {
   cylinder_72,
   cylinder_144,
   cylinder_360,
-  cylinder_720
+  //cylinder_720
 }

@@ -26,7 +26,7 @@ var sphere_1000 = null // 98 points X centers
 var sphere_10000 = null // 1012 points X centers
 var sphere_100000 = null // 9940 points X centers
 
-const setupArea = {
+const setupUnion = {
   name : 'union setup',
   api  : 'setup',
   div  : '0',
@@ -103,12 +103,13 @@ const union_sphere_10000 = {
 }
 
 module.exports = {
-  setupArea,
+  setupUnion,
+
   union_circle_100,
   union_circle_500,
   union_circle_1000,
-//  union_circle_5000,
-//  union_circle_10000,
+  union_circle_5000,
+  union_circle_10000,
 
   union_sphere_600,
   union_sphere_1000,

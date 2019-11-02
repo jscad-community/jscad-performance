@@ -126,13 +126,16 @@ const center_sphere_100000 = {
 
 module.exports = {
   setupCenter,
-  center_arc_10,
-  center_arc_100,
-  center_arc_200,
-  center_arc_400,
+
+  //center_arc_10,
+  //center_arc_100,
+  //center_arc_200,
+  //center_arc_400,
+
   center_circle_10,
   center_circle_100,
   center_circle_1000,
+
   center_sphere_100,
   center_sphere_1000,
   center_sphere_10000,

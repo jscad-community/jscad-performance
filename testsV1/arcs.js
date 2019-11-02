@@ -48,5 +48,5 @@ module.exports = {
   arc_72,
   arc_144,
   arc_360,
-  arc_720
+  //arc_720
 }
