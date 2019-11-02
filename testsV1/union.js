@@ -112,8 +112,8 @@ module.exports = {
   union_circle_100,
   union_circle_500,
   union_circle_1000,
-//  union_circle_5000,
-//  union_circle_10000,
+  union_circle_5000,
+  union_circle_10000,
 
   union_sphere_600,
   union_sphere_1000,

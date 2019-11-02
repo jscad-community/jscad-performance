@@ -113,6 +113,6 @@ module.exports = {
   transform_sphere_100,
   transform_sphere_1000,
   transform_sphere_10000,
-  transform_sphere_100000,
-  transform_sphere_50000
+  //transform_sphere_100000,
+  //transform_sphere_50000
 }

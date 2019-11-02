@@ -5,14 +5,13 @@ const measureArea = require('./csg.js/src/operations/measurements/measureArea')
 var circle_10 = null // 10 points
 var circle_100 = null // 100 points
 var circle_1000 = null // 1000 points
+var circle_10000 = null // 10000 points
 
 var sphere_7 = null // 98 points
 var sphere_22 = null // 1012 points
 var sphere_70 = null // 9940 points
 var sphere_158 = null // 50244 points
 var sphere_224 = null // 99904 points
-
-// number of points ['100', '1000', '10000', '100000', '200000', '400000']
 
 const setupArea = {
   name : 'measurements setup',
@@ -22,6 +21,7 @@ const setupArea = {
     circle_10 = circle({radius: 100, segments: 10})
     circle_100 = circle({radius: 100, segments: 100})
     circle_1000 = circle({radius: 100, segments: 1000})
+    circle_10000 = circle({radius: 100, segments: 10000})
 
     sphere_7 = sphere({radius: 100, segments: 7})
     sphere_22 = sphere({radius: 100, segments: 22})
@@ -51,6 +51,13 @@ const measureArea_circle_1000 = {
   api  : 'measureArea(circle)',
   div  : '1000',
   func : function runme() { return measureArea(circle_1000) }
+}
+
+const measureArea_circle_10000 = {
+  name : 'measureArea(10000)',
+  api  : 'measureArea(circle)',
+  div  : '10000',
+  func : function runme() { return measureArea(circle_10000) }
 }
 
 const measureArea_sphere_100 = {
@@ -90,12 +97,15 @@ const measureArea_sphere_100000 = {
 
 module.exports = {
   setupArea,
+
   measureArea_circle_10,
   measureArea_circle_100,
   measureArea_circle_1000,
+  measureArea_circle_10000,
+
   measureArea_sphere_100,
   measureArea_sphere_1000,
   measureArea_sphere_10000,
   measureArea_sphere_100000,
-  measureArea_sphere_50000
+  //measureArea_sphere_50000
 }

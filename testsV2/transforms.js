@@ -137,16 +137,19 @@ const transform_sphere_100000 = {
 
 module.exports = {
   setupTransforms,
-  transform_arc_10,
-  transform_arc_100,
-  transform_arc_200,
-  transform_arc_400,
+
+  //transform_arc_10,
+  //transform_arc_100,
+  //transform_arc_200,
+  //transform_arc_400,
+
   transform_circle_10,
   transform_circle_100,
   transform_circle_1000,
+
   transform_sphere_100,
   transform_sphere_1000,
   transform_sphere_10000,
-  transform_sphere_100000,
-  transform_sphere_50000
+  //transform_sphere_100000,
+  //transform_sphere_50000
 }

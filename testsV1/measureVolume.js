@@ -61,5 +61,5 @@ module.exports = {
   measureVolume_sphere_1000,
   measureVolume_sphere_10000,
   measureVolume_sphere_100000,
-  measureVolume_sphere_50000
+  //measureVolume_sphere_50000
 }

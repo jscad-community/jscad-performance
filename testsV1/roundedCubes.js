@@ -46,7 +46,7 @@ module.exports = {
   roundedCube_12,
   roundedCube_36,
   roundedCube_72,
-  roundedCube_144
+//  roundedCube_144
 //  roundedCube_360
 //  roundedCube_720
 }

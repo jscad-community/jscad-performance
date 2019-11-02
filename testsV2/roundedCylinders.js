@@ -46,7 +46,7 @@ module.exports = {
   roundedCylinder_12,
   roundedCylinder_36,
   roundedCylinder_72,
-  roundedCylinder_144
-//  roundedCylinder_360
+  roundedCylinder_144,
+  roundedCylinder_360
 //  roundedCylinder_720
 }

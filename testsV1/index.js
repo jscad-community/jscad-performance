@@ -31,6 +31,27 @@ const transforms = require('./transforms')
 // hulls
 const hull = require('./hull')
 
-const allExports = Object.assign({}, hull)
+//const allExports = Object.assign({}, hull)
+
+// expansions
+const expand = require('./expand')
+
+//const allExports = Object.assign({}, expand)
+
+// extrusions
+const extrudeLinear = require('./extrudeLinear')
+const extrudeRectangular = require('./extrudeRectangular')
+const extrudeRotate = require('./extrudeRotate')
+
+//const allExports = Object.assign({}, extrudeLinear, extrudeRectangular, extrudeRotate)
+
+const allExports = Object.assign({},
+  arcs, circles, cylinders, roundedCylinders, roundedCubes, spheres,
+  measureArea, measureBounds, measureVolume,
+  intersect, subtract, union,
+  center, transforms,
+  hull,
+  expand,
+  extrudeLinear, extrudeRectangular, extrudeRotate)
 
 module.exports = allExports
