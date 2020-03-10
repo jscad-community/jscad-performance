@@ -1,8 +1,8 @@
-# CSG Performance Suite
+# JSCAD Performance Suite
 
-Currently, there are performance suites for these versions of the JSCAD CSG library.
+There are performance suites for these versions of the JSCAD CSG module.
 - CSG V1
-- CSG V2
+- Modeling V2
 
 The suites must be run manually, and require a extended period of time to complete.
 
@@ -12,13 +12,13 @@ Just clone this repository, and run the following command.
 
 node install
 
-This will install the required libraries, including the latest V1 version of the CSG library.
+This will install the required modules, including the last V1 version of the CSG library (@jscad/csg).
 
-At this time (2019-07), the V2 version of the CSG library is not available. So, you will have to do the following.
+The V2 version of the CSG library (@jscad/modeling) is now part of the OpenJSCAD.org project.
 
-cd testsV2
-
-git clone https://github.com/jscad/csg.js.git
+cd node_modules/@jscad/
+ln -s ../../../OpenJSCAD.org/packages/modeling modeling
+cd ../..
 
 # Execution
 
@@ -28,7 +28,7 @@ node --expose_gc --always_compact ./performanceV1.js
 
 node --expose_gc --always_compact ./performanceV2.js
 
-As always, performance is RELATIVE so these need to be completed on the SAME MACHINE.
+As always, performance is RELATIVE, so all suites need to be executed on the SAME MACHINE.
 It would be wise to complete these suites when there is little or no load as well.
 
 # Tips

@@ -1,6 +1,4 @@
-const {circle, sphere} = require('./csg.js/src/primitives');
-
-const union = require('./csg.js/src/operations/booleans/union')
+const {primitives, booleans} = require('@jscad/modeling')
 
 var centers = [
   [0, 0, 0],
@@ -31,16 +29,16 @@ const setupUnion = {
   api  : 'setup',
   div  : '0',
   func : function runme() {
-    circle_100 = centers.map((center) => circle({radius: 100, segments: 10, center: center}))
-    circle_500 = centers.map((center) => circle({radius: 100, segments: 50, center: center}))
-    circle_1000 = centers.map((center) => circle({radius: 100, segments: 100, center: center}))
-    circle_5000 = centers.map((center) => circle({radius: 100, segments: 500, center: center}))
-    circle_10000 = centers.map((center) => circle({radius: 100, segments: 1000, center: center}))
+    circle_100 = centers.map((center) => primitives.circle({radius: 100, segments: 10, center: center}))
+    circle_500 = centers.map((center) => primitives.circle({radius: 100, segments: 50, center: center}))
+    circle_1000 = centers.map((center) => primitives.circle({radius: 100, segments: 100, center: center}))
+    circle_5000 = centers.map((center) => primitives.circle({radius: 100, segments: 500, center: center}))
+    circle_10000 = centers.map((center) => primitives.circle({radius: 100, segments: 1000, center: center}))
 
-    sphere_600 = centers.map((center) => sphere({radius: 100, segments: 6, center: center}))
-    sphere_1000 = centers.map((center) => sphere({radius: 100, segments: 7, center: center}))
-    sphere_10000 = centers.map((center) => sphere({radius: 100, segments: 22, center: center}))
-    sphere_100000 = centers.map((center) => sphere({radius: 100, segments: 70, center: center}))
+    sphere_600 = centers.map((center) => primitives.sphere({radius: 100, segments: 6, center: center}))
+    sphere_1000 = centers.map((center) => primitives.sphere({radius: 100, segments: 7, center: center}))
+    sphere_10000 = centers.map((center) => primitives.sphere({radius: 100, segments: 22, center: center}))
+    sphere_100000 = centers.map((center) => primitives.sphere({radius: 100, segments: 70, center: center}))
 
     return {}
   }
@@ -50,56 +48,56 @@ const union_circle_100 = {
   name : 'union(100)',
   api  : 'union(circle)',
   div  : '100',
-  func : function runme() { return union(circle_100) }
+  func : function runme() { return booleans.union(circle_100) }
 }
 
 const union_circle_500 = {
   name : 'union(500)',
   api  : 'union(circle)',
   div  : '500',
-  func : function runme() { return union(circle_500) }
+  func : function runme() { return booleans.union(circle_500) }
 }
 
 const union_circle_1000 = {
   name : 'union(1000)',
   api  : 'union(circle)',
   div  : '1000',
-  func : function runme() { return union(circle_1000) }
+  func : function runme() { return booleans.union(circle_1000) }
 }
 
 const union_circle_5000 = {
   name : 'union(5000)',
   api  : 'union(circle)',
   div  : '5000',
-  func : function runme() { return union(circle_5000) }
+  func : function runme() { return booleans.union(circle_5000) }
 }
 
 const union_circle_10000 = {
   name : 'union(10000)',
   api  : 'union(circle)',
   div  : '10000',
-  func : function runme() { return union(circle_10000) }
+  func : function runme() { return booleans.union(circle_10000) }
 }
 
 const union_sphere_600 = {
   name : 'union(600)',
   api  : 'union(sphere)',
   div  : '600',
-  func : function runme() { return union(sphere_600) }
+  func : function runme() { return booleans.union(sphere_600) }
 }
 
 const union_sphere_1000 = {
   name : 'union(1000)',
   api  : 'union(sphere)',
   div  : '1000',
-  func : function runme() { return union(sphere_1000) }
+  func : function runme() { return booleans.union(sphere_1000) }
 }
 
 const union_sphere_10000 = {
   name : 'union(10000)',
   api  : 'union(sphere)',
   div  : '10000',
-  func : function runme() { return union(sphere_10000) }
+  func : function runme() { return booleans.union(sphere_10000) }
 }
 
 module.exports = {
