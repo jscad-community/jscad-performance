@@ -19,36 +19,36 @@ const setupExtrudeRotate = {
 // EXTRUSIONS... extrudeRoate
 
 const extrudeRotate_100 = {
-  name : 'extrudeRotate(100)',
-  api  : 'extrudeRotate(100)',
+  name : 'extrudeRotate',
+  api  : 'extrudeRotate',
   div  : '100',
   func : function run() { return extrusions.extrudeRotate({segments: 10}, circle_10) }
 }
 
 const extrudeRotate_500 = {
-  name : 'extrudeRotate(500)',
-  api  : 'extrudeRotate(500)',
+  name : 'extrudeRotate',
+  api  : 'extrudeRotate',
   div  : '500',
   func : function run() { return extrusions.extrudeRotate({segments: 50}, circle_10) }
 }
 
 const extrudeRotate_1000 = {
-  name : 'extrudeRotate(1000)',
-  api  : 'extrudeRotate(1000)',
+  name : 'extrudeRotate',
+  api  : 'extrudeRotate',
   div  : '1000',
   func : function run() { return extrusions.extrudeRotate({segments: 20}, circle_50) }
 }
 
 const extrudeRotate_5000 = {
-  name : 'extrudeRotate(5000)',
-  api  : 'extrudeRotate(5000)',
+  name : 'extrudeRotate',
+  api  : 'extrudeRotate',
   div  : '5000',
   func : function run() { return extrusions.extrudeRotate({segments: 100}, circle_50) }
 }
 
 const extrudeRotate_10000 = {
-  name : 'extrudeRotate(10000)',
-  api  : 'extrudeRotate(10000)',
+  name : 'extrudeRotate',
+  api  : 'extrudeRotate',
   div  : '10000',
   func : function run() { return extrusions.extrudeRotate({segments: 200}, circle_50) }
 }

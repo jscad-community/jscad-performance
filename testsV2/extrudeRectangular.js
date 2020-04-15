@@ -29,50 +29,50 @@ const setupExtrudeRectangular = {
 // EXTRUSIONS... extrudeRectangular
 
 const extrudeRectangular_arc_10 = {
-  name : 'extrudeRectangular(10arc)',
-  api  : 'extrudeRectangular(10arc)',
-  div  : '10',
+  name : 'extrudeRectangular(arc)',
+  api  : 'extrudeRectangular(arc)',
+  div  : '16',
   func : function run() { return extrusions.extrudeRectangular({size: 3, height: 10, corners: 'round', segments: 8}, arc_16) }
 }
 
 const extrudeRectangular_arc_100 = {
-  name : 'extrudeRectangular(100arc)',
-  api  : 'extrudeRectangular(100arc)',
-  div  : '100',
+  name : 'extrudeRectangular(arc)',
+  api  : 'extrudeRectangular(arc)',
+  div  : '196',
   func : function run() { return extrusions.extrudeRectangular({size: 3, height: 10, corners: 'round', segments: 8}, arc_196) }
 }
 
 const extrudeRectangular_arc_200 = {
-  name : 'extrudeRectangular(200arc)',
-  api  : 'extrudeRectangular(200arc)',
-  div  : '200',
+  name : 'extrudeRectangular(arc)',
+  api  : 'extrudeRectangular(arc)',
+  div  : '396',
   func : function run() { return extrusions.extrudeRectangular({size: 3, height: 10, corners: 'round', segments: 8}, arc_396) }
 }
 
 const extrudeRectangular_arc_400 = {
-  name : 'extrudeRectangular(400arc)',
-  api  : 'extrudeRectangular(400arc)',
-  div  : '400',
+  name : 'extrudeRectangular(arc)',
+  api  : 'extrudeRectangular(arc)',
+  div  : '796',
   func : function run() { return extrusions.extrudeRectangular({size: 3, height: 10, corners: 'round', segments: 8}, arc_796) }
 }
 
 const extrudeRectangular_circle_10 = {
-  name : 'extrudeRectangular(10x10circle)',
-  api  : 'extrudeRectangular(10x10circle)',
+  name : 'extrudeRectangular(circle)',
+  api  : 'extrudeRectangular(circle)',
   div  : '10',
   func : function run() { return extrusions.extrudeRectangular({size: 3, height: 10, corners: 'round', segments: 16}, circle_10) }
 }
 
 const extrudeRectangular_circle_100 = {
-  name : 'extrudeRectangular(100x100circle)',
-  api  : 'extrudeRectangular(100x100circle)',
+  name : 'extrudeRectangular(circle)',
+  api  : 'extrudeRectangular(circle)',
   div  : '100',
   func : function run() { return extrusions.extrudeRectangular({size: 3, height: 10, corners: 'round', segments: 16}, circle_100) }
 }
 
 const extrudeRectangular_circle_1000 = {
-  name : 'extrudeRectangular(360)',
-  api  : 'extrudeRectangular(360)',
+  name : 'extrudeRectangular(circle)',
+  api  : 'extrudeRectangular(circle)',
   div  : '1000',
   func : function run() { return extrusions.extrudeRectangular({size: 3, height: 10, corners: 'round', segments: 16}, circle_1000) }
 }
