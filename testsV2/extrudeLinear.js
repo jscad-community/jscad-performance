@@ -19,36 +19,36 @@ const setupExtrudeLinear = {
 // EXTRUSIONS... extrudeLinear
 
 const extrudeLinear_100 = {
-  name : 'extrudeLinear(100)',
-  api  : 'extrudeLinear(100)',
+  name : 'extrudeLinear',
+  api  : 'extrudeLinear',
   div  : '100',
   func : function run() { return extrusions.extrudeLinear({offset: [0,0,100], twistAngle: 5, twistSteps: 10}, circle_10) }
 }
 
 const extrudeLinear_500 = {
-  name : 'extrudeLinear(500)',
-  api  : 'extrudeLinear(500)',
+  name : 'extrudeLinear',
+  api  : 'extrudeLinear',
   div  : '500',
   func : function run() { return extrusions.extrudeLinear({offset: [0,0,100], twistAngle: 5, twistSteps: 10}, circle_50) }
 }
 
 const extrudeLinear_1000 = {
-  name : 'extrudeLinear(1000)',
-  api  : 'extrudeLinear(1000)',
+  name : 'extrudeLinear',
+  api  : 'extrudeLinear',
   div  : '1000',
   func : function run() { return extrusions.extrudeLinear({offset: [0,0,100], twistAngle: 5, twistSteps: 10}, circle_100) }
 }
 
 const extrudeLinear_5000 = {
-  name : 'extrudeLinear(5000)',
-  api  : 'extrudeLinear(5000)',
+  name : 'extrudeLinear',
+  api  : 'extrudeLinear',
   div  : '5000',
   func : function run() { return extrusions.extrudeLinear({offset: [0,0,100], twistAngle: 5, twistSteps: 50}, circle_100) }
 }
 
 const extrudeLinear_10000 = {
-  name : 'extrudeLinear(10000)',
-  api  : 'extrudeLinear(10000)',
+  name : 'extrudeLinear',
+  api  : 'extrudeLinear',
   div  : '10000',
   func : function run() { return extrusions.extrudeLinear({offset: [0,0,100], twistAngle: 5, twistSteps: 100}, circle_100) }
 }

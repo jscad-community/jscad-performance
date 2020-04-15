@@ -2,6 +2,7 @@
 const arcs = require('./arcs.js')
 const circles = require('./circles.js')
 const cylinders = require('./cylinders.js')
+const roundedRectangles = require('./roundedRectangles.js')
 const roundedCylinders = require('./roundedCylinders.js')
 const roundedCuboids = require('./roundedCuboids.js')
 const spheres = require('./spheres.js')
@@ -46,7 +47,7 @@ const extrudeRotate = require('./extrudeRotate')
 //const allExports = Object.assign({}, extrudeLinear, extrudeRectangular, extrudeRotate)
 
 const allExports = Object.assign({},
-  arcs, circles, cylinders, roundedCylinders, roundedCuboids, spheres,
+  arcs, circles, roundedRectangles, cylinders, roundedCylinders, roundedCuboids, spheres,
   measureArea, measureBounds, measureVolume,
   intersect, subtract, union,
   center, transforms,

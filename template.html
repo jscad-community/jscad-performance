@@ -1,0 +1,101 @@
+<!doctype html>
+<html>
+
+<head>
+  <title>JSCAD Performance</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.min.js"></script>
+  <style>
+    canvas{
+      -moz-user-select: none;
+      -webkit-user-select: none;
+      -ms-user-select: none;
+    }
+    div {
+      width: 100%;
+      margin: 10px 0px;
+      outline-style: groove;
+      outline-width: thick;
+    }
+  </style>
+</head>
+
+<body>
+
+<script>
+// common color list
+window.chartColors = [
+  'maroon',
+  'green',
+  'navy',
+  'red',
+  'lime',
+  'blue',
+  'purple',
+  'olive',
+  'teal',
+  'fuchsia',
+  'yellow',
+  'aqua'
+]
+// list of configurations for the charts
+window.configs = []
+// list of charts
+window.charts = []
+
+window.onload = function() {
+  let statistics = document.getElementsByClassName('statistics')
+  for (let index = 0; index < statistics.length; index++) {
+    let ctx = statistics[index].getContext('2d')
+    let config = window.configs[index]
+    if (ctx && config) window.charts.push(new Chart(ctx, config))
+  }
+}
+
+const addConfig = (title) => {
+  let config = {
+    type: 'line',
+    data: { labels: listOfDates, datasets: [] },
+    options: {
+      responsive: true,
+      title: { display: true, text: title },
+      tooltips: { mode: 'index', intersect: false, },
+      hover: { mode: 'nearest', intersect: true },
+      scales: {
+        x: { display: true, scaleLabel: { display: true, labelString: 'Date' } },
+        y: { display: true, scaleLabel: { display: true, labelString: 'Average Time (ms)' } }
+      }
+    }
+  }
+  window.configs.push(config)
+  return config
+}
+
+const addDataset = (config, statistics) => {
+  const color = window.chartColors[config.data.datasets.length]
+  const dataset = {
+    label: statistics.label,
+    fill: false,
+    backgroundColor: color,
+    borderColor: color,
+    data: statistics.data
+  }
+  config.data.datasets.push(dataset)
+}
+
+const None = NaN // null values
+
+<!-- list of dates -->
+const listOfDates = [
+  __LIST_OF_DATES__
+]
+</script>
+
+<!-- list of charts, including data sets -->
+<!-- create a div -->
+<!-- create a script to add a chart configuration -->
+<!-- create a script to define data sets and add to a chart configuration -->
+
+__LIST_OF_CHARTS__
+
+  </body>
+</html>
