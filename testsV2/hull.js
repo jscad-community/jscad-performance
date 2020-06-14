@@ -1,4 +1,7 @@
-const {primitives, hulls} = require('@jscad/modeling')
+const {circle, sphere} = require('@jscad/modeling').primitives
+const {translate} = require('@jscad/modeling').transforms
+
+const {hull} = require('@jscad/modeling').hulls
 
 var centers = [
   [0, 0, 0],
@@ -28,13 +31,13 @@ const setupHull = {
   api  : 'setup',
   div  : '0',
   func : function runme() {
-    circle_100 = centers.map((center) => primitives.circle({radius: 100, segments: 10, center: center}))
-    circle_1000 = centers.map((center) => primitives.circle({radius: 100, segments: 100, center: center}))
-    circle_10000 = centers.map((center) => primitives.circle({radius: 100, segments: 1000, center: center}))
+    circle_100 = centers.map((center) => translate(center, circle({radius: 100, segments: 10})))
+    circle_1000 = centers.map((center) => translate(center, circle({radius: 100, segments: 100})))
+    circle_10000 = centers.map((center) => translate(center, circle({radius: 100, segments: 1000})))
 
-    sphere_1000 = centers.map((center) => primitives.sphere({radius: 100, segments: 7, center: center}))
-    sphere_10000 = centers.map((center) => primitives.sphere({radius: 100, segments: 22, center: center}))
-    sphere_100000 = centers.map((center) => primitives.sphere({radius: 100, segments: 70, center: center}))
+    sphere_1000 = centers.map((center) => translate(center, sphere({radius: 100, segments: 7})))
+    sphere_10000 = centers.map((center) => translate(center, sphere({radius: 100, segments: 22})))
+    sphere_100000 = centers.map((center) => translate(center, sphere({radius: 100, segments: 70})))
     return {}
   }
 }
@@ -43,42 +46,42 @@ const hull_circle_100 = {
   name : 'hull(100)',
   api  : 'hull(circle)',
   div  : '100',
-  func : function runme() { return hulls.hull(circle_100) }
+  func : function runme() { return hull(circle_100) }
 }
 
 const hull_circle_1000 = {
   name : 'hull(1000)',
   api  : 'hull(circle)',
   div  : '1000',
-  func : function runme() { return hulls.hull(circle_1000) }
+  func : function runme() { return hull(circle_1000) }
 }
 
 const hull_circle_10000 = {
   name : 'hull(10000)',
   api  : 'hull(circle)',
   div  : '10000',
-  func : function runme() { return hulls.hull(circle_10000) }
+  func : function runme() { return hull(circle_10000) }
 }
 
 const hull_sphere_1000 = {
   name : 'hull(1000)',
   api  : 'hull(sphere)',
   div  : '1000',
-  func : function runme() { return hulls.hull(sphere_1000) }
+  func : function runme() { return hull(sphere_1000) }
 }
 
 const hull_sphere_10000 = {
   name : 'hull(10000)',
   api  : 'hull(sphere)',
   div  : '10000',
-  func : function runme() { return hulls.hull(sphere_10000) }
+  func : function runme() { return hull(sphere_10000) }
 }
 
 const hull_sphere_100000 = {
   name : 'hull(100000)',
   api  : 'hull(sphere)',
   div  : '100000',
-  func : function runme() { return hulls.hull(sphere_100000) }
+  func : function runme() { return hull(sphere_100000) }
 }
 
 module.exports = {
