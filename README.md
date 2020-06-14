@@ -41,6 +41,23 @@ The list of tests is controlled by the index.js found in testsV1 and testV2 dire
 
 In addition, each functional area has a set of tests exported. For example, see the exports at the end of circles.js
 
+## Statistics
+
+There are two scripts to load and convert the performace statistics.
+The statistics are loaded into a sqlite3 database by load_stats.py; jscad.stats.db
+The statistics are converted into reports (html) by convert_stats.py; index.html
+
+The database can be accessed using sqlite3 as well.
+```
+sqlite3 jscad.stats.db
+```
+
+The database tables are:
+```
+CREATE TABLE daily (date TEXT, name TEXT, weight INTEGER, interations INTEGER, average NUMERIC, allocation INTEGER);
+CREATE TABLE environment (date TEXT, hostname TEXT, hardware TEXT, os TEXT, node TEXT);
+```
+
 ## License
 
 The MIT License (MIT)
