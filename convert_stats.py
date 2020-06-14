@@ -13,11 +13,11 @@ import sqlite3
 #
 # GLOBAL variables
 #
-homeDir = '/Users/zdev/dev/mamp/apache2/htdocs/jscad/csg-performance'
+homeDir = '/Users/zdev/dev/mamp/apache2/htdocs/jscad/jscad-performance'
 templatePath  = homeDir + '/template.html'
 indexPath = homeDir + '/index.html'
 
-dbPath = homeDir + '/lab.stats.db'
+dbPath = homeDir + '/jscad.stats.db'
 
 #
 #

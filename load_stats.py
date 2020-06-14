@@ -11,13 +11,13 @@ import sqlite3
 #
 # GLOBAL variables
 #
-homeDir = '/Users/zdev/dev/mamp/apache2/htdocs/jscad/csg-performance'
+homeDir = '/Users/zdev/dev/mamp/apache2/htdocs/jscad/jscad-performance'
 csvDir  = homeDir + '/csvs'
 statDir = homeDir + '/reports'
 
 maxDelta = 1;
 
-dbPath = homeDir + '/lab.stats.db'
+dbPath = homeDir + '/jscad.stats.db'
 
 #
 # regular expressions for parsing statistics
@@ -58,7 +58,7 @@ def insertStatistics( db, today, data ) :
 # Main Program Entry
 #------------------------------------------------------------
 xtoday = date.today()
-xtoday = date(2020, 4, 14)
+xtoday = date(2020, 6, 12)
 print 'Loading JSCAD Performace Statistics:',xtoday
 
 dbconn = sqlite3.connect( dbPath )
