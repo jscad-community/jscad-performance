@@ -11,10 +11,10 @@ const spheres = require('./spheres.js')
 
 // measurements
 const measureArea = require('./measureArea')
-const measureBounds = require('./measureBounds')
+const measureBoundingBox = require('./measureBoundingBox')
 const measureVolume = require('./measureVolume')
 
-//const allExports = Object.assign({}, measureArea, measureBounds, measureVolume)
+//const allExports = Object.assign({}, measureArea, measureBoundingBox, measureVolume)
 
 // booleans
 const intersect = require('./intersect')
@@ -48,7 +48,7 @@ const extrudeRotate = require('./extrudeRotate')
 
 const allExports = Object.assign({},
   arcs, circles, roundedRectangles, cylinders, roundedCylinders, roundedCuboids, spheres,
-  measureArea, measureBounds, measureVolume,
+  measureArea, measureBoundingBox, measureVolume,
   intersect, subtract, union,
   center, transforms,
   hull,
