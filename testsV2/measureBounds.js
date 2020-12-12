@@ -44,56 +44,56 @@ const measureBounds_circle_10 = {
   name : 'measureBounds(10)',
   api  : 'measureBounds(circle)',
   div  : '10',
-  func : function runme() { return measurements.measureBounds(circle_10) }
+  func : function runme() { return measurements.measureBoundingBox(circle_10) }
 }
 
 const measureBounds_circle_100 = {
   name : 'measureBounds(100)',
   api  : 'measureBounds(circle)',
   div  : '100',
-  func : function runme() { return measurements.measureBounds(circle_100) }
+  func : function runme() { return measurements.measureBoundingBox(circle_100) }
 }
 
 const measureBounds_circle_1000 = {
   name : 'measureBounds(1000)',
   api  : 'measureBounds(circle)',
   div  : '1000',
-  func : function runme() { return measurements.measureBounds(circle_1000) }
+  func : function runme() { return measurements.measureBoundingBox(circle_1000) }
 }
 
 const measureBounds_circle_10000 = {
   name : 'measureBounds(10000)',
   api  : 'measureBounds(circle)',
   div  : '10000',
-  func : function runme() { return measurements.measureBounds(circle_10000) }
+  func : function runme() { return measurements.measureBoundingBox(circle_10000) }
 }
 
 const measureBounds_sphere_100 = {
   name : 'measureBounds(100)',
   api  : 'measureBounds(sphere)',
   div  : '100',
-  func : function runme() { return measurements.measureBounds(sphere_7) }
+  func : function runme() { return measurements.measureBoundingBox(sphere_7) }
 }
 
 const measureBounds_sphere_1000 = {
   name : 'measureBounds(1000)',
   api  : 'measureBounds(sphere)',
   div  : '1000',
-  func : function runme() { return measurements.measureBounds(sphere_22) }
+  func : function runme() { return measurements.measureBoundingBox(sphere_22) }
 }
 
 const measureBounds_sphere_10000 = {
   name : 'measureBounds(10000)',
   api  : 'measureBounds(sphere)',
   div  : '10000',
-  func : function runme() { return measurements.measureBounds(sphere_70) }
+  func : function runme() { return measurements.measureBoundingBox(sphere_70) }
 }
 
 const measureBounds_sphere_100000 = {
   name : 'measureBounds(100000)',
   api  : 'measureBounds(sphere)',
   div  : '100000',
-  func : function runme() { return measurements.measureBounds(sphere_224) }
+  func : function runme() { return measurements.measureBoundingBox(sphere_224) }
 }
 
 module.exports = {
