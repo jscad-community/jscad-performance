@@ -1,4 +1,4 @@
-const {geometry, primitives, transforms} = require('@jscad/modeling')
+const {geometries, primitives, transforms} = require('@jscad/modeling')
 
 const {rotate, scale, translate} = transforms
 
@@ -54,70 +54,70 @@ const transform_arc_10 = {
   name : 'transform(10)',
   api  : 'transform(arc)',
   div  : '10',
-  func : function run() { return geometry.path2.toPoints(translate(newoffsets, rotate(newangles, scale(newfactors, arc_16)))) }
+  func : function run() { return geometries.path2.toPoints(translate(newoffsets, rotate(newangles, scale(newfactors, arc_16)))) }
 }
 
 const transform_arc_100 = {
   name : 'transform(100)',
   api  : 'transform(arc)',
   div  : '100',
-  func : function run() { return geometry.path2.toPoints(translate(newoffsets, rotate(newangles, scale(newfactors, arc_196)))) }
+  func : function run() { return geometries.path2.toPoints(translate(newoffsets, rotate(newangles, scale(newfactors, arc_196)))) }
 }
 
 const transform_arc_200 = {
   name : 'transform(200)',
   api  : 'transform(arc)',
   div  : '200',
-  func : function run() { return geometry.path2.toPoints(translate(newoffsets, rotate(newangles, scale(newfactors, arc_396)))) }
+  func : function run() { return geometries.path2.toPoints(translate(newoffsets, rotate(newangles, scale(newfactors, arc_396)))) }
 }
 
 const transform_arc_400 = {
   name : 'transform(400)',
   api  : 'transform(arc)',
   div  : '400',
-  func : function run() { return geometry.path2.toPoints(translate(newoffsets, rotate(newangles, scale(newfactors, arc_796)))) }
+  func : function run() { return geometries.path2.toPoints(translate(newoffsets, rotate(newangles, scale(newfactors, arc_796)))) }
 }
 
 const transform_circle_10 = {
   name : 'transform(10)',
   api  : 'transform(circle)',
   div  : '10',
-  func : function run() { return geometry.geom2.toSides(translate(newoffsets, rotate(newangles, scale(newfactors, circle_10)))) }
+  func : function run() { return geometries.geom2.toSides(translate(newoffsets, rotate(newangles, scale(newfactors, circle_10)))) }
 }
 
 const transform_circle_100 = {
   name : 'transform(100)',
   api  : 'transform(circle)',
   div  : '100',
-  func : function run() { return geometry.geom2.toSides(translate(newoffsets, rotate(newangles, scale(newfactors, circle_100)))) }
+  func : function run() { return geometries.geom2.toSides(translate(newoffsets, rotate(newangles, scale(newfactors, circle_100)))) }
 }
 
 const transform_circle_1000 = {
   name : 'transform(1000)',
   api  : 'transform(circle)',
   div  : '1000',
-  func : function run() { return geometry.geom2.toSides(translate(newoffsets, rotate(newangles, scale(newfactors, circle_1000)))) }
+  func : function run() { return geometries.geom2.toSides(translate(newoffsets, rotate(newangles, scale(newfactors, circle_1000)))) }
 }
 
 const transform_sphere_100 = {
   name : 'transform(100)',
   api  : 'transform(sphere)',
   div  : '100',
-  func : function run() { return geometry.geom3.toPolygons(translate(newoffsets, rotate(newangles, scale(newfactors, sphere_7)))) }
+  func : function run() { return geometries.geom3.toPolygons(translate(newoffsets, rotate(newangles, scale(newfactors, sphere_7)))) }
 }
 
 const transform_sphere_1000 = {
   name : 'transform(1000)',
   api  : 'transform(sphere)',
   div  : '1000',
-  func : function run() { return geometry.geom3.toPolygons(translate(newoffsets, rotate(newangles, scale(newfactors, sphere_22)))) }
+  func : function run() { return geometries.geom3.toPolygons(translate(newoffsets, rotate(newangles, scale(newfactors, sphere_22)))) }
 }
 
 const transform_sphere_10000 = {
   name : 'transform(10000)',
   api  : 'transform(sphere)',
   div  : '10000',
-  func : function run() { return geometry.geom3.toPolygons(translate(newoffsets, rotate(newangles, scale(newfactors, sphere_70)))) }
+  func : function run() { return geometries.geom3.toPolygons(translate(newoffsets, rotate(newangles, scale(newfactors, sphere_70)))) }
 }
 
 module.exports = {
