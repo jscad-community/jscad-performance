@@ -9,6 +9,7 @@
   "author": "z3dev",
   "license": "MIT",
   "dependencies": {
+    "@jscad/modeling": "^2.9.3",
     "@jscad/csg": "^0.7.0",
     "microtime": "^3.0.0"
   }
