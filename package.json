@@ -1,16 +1,38 @@
 {
-  "name": "csg-performance",
-  "version": "1.0.0",
-  "description": "CSG Performance Suite",
-  "main": "index.js",
+  "name": "jscad-performance",
+  "version": "3.0.0",
+  "description": "Performance Suite for JSCAD Modeling",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"See the README\" && exit 1",
+    "lint": "standardx 'packages/**/*.js'"
   },
   "author": "z3dev",
   "license": "MIT",
-  "dependencies": {
-    "@jscad/modeling": "^2.9.3",
-    "@jscad/csg": "^0.7.0",
-    "microtime": "^3.0.0"
+  "devDependencies": {
+    "@lerna-lite/changed": "^2.7.2",
+    "@lerna-lite/cli": "^2.7.2",
+    "@lerna-lite/run": "^2.7.2",
+    "@lerna-lite/version": "^2.7.2",
+    "standardx": "7.0.0"
+  },
+  "eslintConfig": {
+    "rules": {
+      "func-style": [
+        "error",
+        "expression"
+      ],
+      "arrow-body-style": [
+        "error",
+        "as-needed"
+      ],
+      "arrow-parens": [
+        "error",
+        "always"
+      ],
+      "arrow-spacing": "error",
+      "prefer-arrow-callback": "error",
+      "import/no-default-export": "error",
+      "no-var": "error"
+    }
   }
 }
