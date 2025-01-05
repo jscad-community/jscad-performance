@@ -1,0 +1,29 @@
+{
+  "name": "v3",
+  "version": "3.0.0",
+  "description": "Performance Suite for JSCAD V3",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "suite": "node --expose-gc ./performanceV3.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jscad-community/jscad-performance.git"
+  },
+  "keywords": [
+    "JSCAD",
+    "V3"
+  ],
+  "author": "z3dev",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jscad-community/jscad-performance/issues"
+  },
+  "homepage": "https://github.com/jscad-community/jscad-performance#readme",
+  "dependencies": {
+    "@jscad/modeling": "^3.0.1-alpha.0",
+    "microtime": "^3.1.1"
+  }
+}
