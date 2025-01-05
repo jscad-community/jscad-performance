@@ -1,35 +1,33 @@
 # JSCAD Performance Suite
 
-There are performance suites for these versions of the JSCAD CSG module.
-- CSG V1
-- Modeling V2
+There are performance suites for each version of the JSCAD modeling package.
+- JSCAD V1 CSG package
+- JSCAD V2 modeling package
+- JSCAD V3 modeling package
 
 The suites must be run manually, and require a extended period of time to complete.
+
+The next steps require [NPM](https://www.npmjs.com/) and [Node.js](https://nodejs.org).
+The JSCAD project always develops with the latest LTS releases, so install these versions.
 
 ## Installation
 
 Just clone this repository, and run the following command.
 
+```
 node install
-
-This will install the required modules, including the last V1 version of the CSG library (@jscad/csg).
-
-The V2 version of the CSG library (@jscad/modeling) is now part of the OpenJSCAD.org project.
-
+npm run bootstrap
 ```
-cd node_modules/@jscad/
-ln -s ../../../OpenJSCAD.org/packages/modeling modeling
-cd ../..
-```
+
+This will install the required modules, including the latest versions of the JSCAD packages.
 
 ## Execution
 
 If you are ready then use these commands to initiate the performance suites.
 
 ```
-node --expose_gc --always_compact ./performanceV1.js
-
-node --expose_gc --always_compact ./performanceV2.js
+cd packages/v3
+npm run suite
 ```
 
 As always, performance is RELATIVE, so all suites need to be executed on the SAME MACHINE.
@@ -37,7 +35,7 @@ It would be wise to complete these suites when there is little or no load as wel
 
 ## Tips
 
-The list of tests is controlled by the index.js found in testsV1 and testV2 directory.
+The list of tests is controlled by the index.js found in testsV1, testV2, and testV2 directorires.
 
 In addition, each functional area has a set of tests exported. For example, see the exports at the end of circles.js
 

@@ -3,6 +3,7 @@
   "version": "3.0.0",
   "description": "Performance Suite for JSCAD Modeling",
   "scripts": {
+    "bootstrap": "lerna exec -- npm install",
     "test": "echo \"See the README\" && exit 1",
     "lint": "standardx 'packages/**/*.js'"
   },
@@ -11,6 +12,7 @@
   "devDependencies": {
     "@lerna-lite/changed": "^2.7.2",
     "@lerna-lite/cli": "^2.7.2",
+    "@lerna-lite/exec": "^3.11.0",
     "@lerna-lite/run": "^2.7.2",
     "@lerna-lite/version": "^2.7.2",
     "standardx": "7.0.0"
