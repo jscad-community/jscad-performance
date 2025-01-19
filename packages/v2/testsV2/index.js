@@ -2,9 +2,9 @@
 const arcs = require('./arcs.js')
 const circles = require('./circles.js')
 const cylinders = require('./cylinders.js')
-const roundedRectangles = require('./roundedRectangles.js')
-const roundedCylinders = require('./roundedCylinders.js')
 const roundedCuboids = require('./roundedCuboids.js')
+const roundedCylinders = require('./roundedCylinders.js')
+const roundedRectangles = require('./roundedRectangles.js')
 const spheres = require('./spheres.js')
 
 // geometries - path2
@@ -15,6 +15,10 @@ const appendBezier = require('./appendBezier')
 const measureArea = require('./measureArea')
 const measureBounds = require('./measureBounds')
 const measureBoundingSphere = require('./measureBoundingSphere')
+// FIXME measureCenter
+// FIXME measureCenterOfMass
+// FIXME measureDimensions
+// FIXME measureEpsilon
 const measureVolume = require('./measureVolume')
 
 // booleans
@@ -53,8 +57,8 @@ const allExports = Object.assign({},
   appendArc, appendBezier,
   measureArea, measureBounds, measureBoundingSphere, measureVolume,
   intersect, scission, subtract, union,
-  // expand,
-  extrudeLinear, extrudeRectangular, extrudeRotate,
+  expand,
+  extrudeLinear, extrudeRectangular, extrudeRotate, project,
   hull,
   align, center, transforms
 )

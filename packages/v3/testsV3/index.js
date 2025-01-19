@@ -41,7 +41,7 @@ export * from './transforms.js'
 
 // EXPANSIONS
 
-// export * from './expand.js'
+export * from './expand.js'
 
 // EXTRUSIONS
 
