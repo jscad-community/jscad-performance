@@ -35,18 +35,10 @@ const cylinder_360 = {
   func: function runme () { return CSG.cylinder({ radius: 100, resolution: 360 }) }
 }
 
-const cylinder_720 = {
-  name: 'CSG.cylinder(resolution: 720)',
-  api: 'cylinder',
-  div: '720',
-  func: function runme () { return CSG.cylinder({ radius: 100, resolution: 720 }) }
-}
-
 module.exports = {
   cylinder_12,
   cylinder_36,
   cylinder_72,
   cylinder_144,
   cylinder_360
-  // cylinder_720
 }

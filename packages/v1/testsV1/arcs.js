@@ -35,18 +35,10 @@ const arc_360 = {
   func: function runme () { return CSG.Path2D.arc({ radius: 100, startangle: 0, endangle: 180, resolution: 360 }) }
 }
 
-const arc_720 = {
-  name: 'Path2D.arc(resolution: 720)',
-  api: 'arc',
-  div: '720',
-  func: function runme () { return CSG.Path2D.arc({ radius: 100, startangle: 0, endangle: 180, resolution: 720 }) }
-}
-
 module.exports = {
   arc_12,
   arc_36,
   arc_72,
   arc_144,
   arc_360
-  // arc_720
 }

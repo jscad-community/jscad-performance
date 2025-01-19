@@ -46,6 +46,7 @@ const setupIntersect = {
     circles_1000 = centers2D.map((center) => CAG.circle({ radius: 100, resolution: 100, center: center }))
     circles_5000 = centers2D.map((center) => CAG.circle({ radius: 100, resolution: 500, center: center }))
     circles_10000 = centers2D.map((center) => CAG.circle({ radius: 100, resolution: 1000, center: center }))
+
     spheres_600 = centers3D.map((center) => CSG.sphere({ radius: 100, resolution: 6, center: center }))
     spheres_1000 = centers3D.map((center) => CSG.sphere({ radius: 100, resolution: 8, center: center }))
     spheres_10000 = centers3D.map((center) => CSG.sphere({ radius: 100, resolution: 26, center: center }))

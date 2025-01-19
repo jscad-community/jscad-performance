@@ -44,6 +44,6 @@ const allExports = Object.assign({},
   extrudeLinear, extrudeRectangular, extrudeRotate,
   hull,
   center, transforms,
-}
+)
 
 module.exports = allExports

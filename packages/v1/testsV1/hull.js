@@ -43,6 +43,7 @@ const setupHull = {
     circles_100 = centers2D.map((center) => CAG.circle({ radius: 100, resolution: 10, center: center }))
     circles_1000 = centers2D.map((center) => CAG.circle({ radius: 100, resolution: 100, center: center }))
     circles_10000 = centers2D.map((center) => CAG.circle({ radius: 100, resolution: 1000, center: center }))
+
     spheres_1000 = centers3D.map((center) => CSG.sphere({ radius: 100, resolution: 8, center: center }))
     spheres_10000 = centers3D.map((center) => CSG.sphere({ radius: 100, resolution: 26, center: center }))
     spheres_100000 = centers3D.map((center) => CSG.sphere({ radius: 100, resolution: 72, center: center }))

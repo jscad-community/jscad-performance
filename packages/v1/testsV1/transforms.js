@@ -12,10 +12,6 @@ let circle_1000 = null // 1000 points
 let sphere_7 = null // 98 points
 let sphere_22 = null // 1012 points
 let sphere_70 = null // 9940 points
-let sphere_158 = null // 50244 points
-let sphere_224 = null // 99904 points
-
-// number of points ['100', '1000', '10000', '100000', '200000', '400000']
 
 const setupTransforms = {
   name: 'transforms setup',
@@ -34,8 +30,6 @@ const setupTransforms = {
     sphere_7 = CSG.sphere({ radius: 100, resolution: 7, center: [50, 50, 50] })
     sphere_22 = CSG.sphere({ radius: 100, resolution: 22, center: [50, 50, 50] })
     sphere_70 = CSG.sphere({ radius: 100, resolution: 70, center: [50, 50, 50] })
-    sphere_158 = CSG.sphere({ radius: 100, resolution: 158, center: [50, 50, 50] })
-    sphere_224 = CSG.sphere({ radius: 100, resolution: 224, center: [50, 50, 50] })
     return {}
   }
 }
@@ -90,28 +84,14 @@ const transform_sphere_10000 = {
   func: function runme () { return sphere_70.scale(5).rotateZ(90).translate(newoffsets) }
 }
 
-const transform_sphere_50000 = {
-  name: 'transform(50000)',
-  api: 'transform(sphere)',
-  div: '50000',
-  func: function runme () { return sphere_158.scale(5).rotateZ(90).translate(newoffsets) }
-}
-
-const transform_sphere_100000 = {
-  name: 'transform(100000)',
-  api: 'transform(sphere)',
-  div: '100000',
-  func: function runme () { return sphere_224.scale(5).rotateZ(90).translate(newoffsets) }
-}
-
 module.exports = {
   setupTransforms,
+
   transform_circle_10,
   transform_circle_100,
   transform_circle_1000,
+
   transform_sphere_100,
   transform_sphere_1000,
   transform_sphere_10000
-  // transform_sphere_100000,
-  // transform_sphere_50000
 }

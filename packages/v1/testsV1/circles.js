@@ -35,18 +35,10 @@ const circle_360 = {
   func: function runme () { return CAG.circle({ radius: 100, resolution: 360 }) }
 }
 
-const circle_720 = {
-  name: 'CAG.circle(resolution: 720)',
-  api: 'circle',
-  div: '720',
-  func: function runme () { return CAG.circle({ radius: 100, resolution: 720 }) }
-}
-
 module.exports = {
   circle_12,
   circle_36,
   circle_72,
   circle_144,
   circle_360
-  // circle_720
 }

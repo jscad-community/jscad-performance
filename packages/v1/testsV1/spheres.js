@@ -35,18 +35,10 @@ const sphere_360 = {
   func: function runme () { return CSG.sphere({ radius: 100, resolution: 360 }) }
 }
 
-const sphere_720 = {
-  name: 'CSG.sphere(resolution: 720)',
-  api: 'sphere',
-  div: '720',
-  func: function runme () { return CSG.sphere({ radius: 100, resolution: 720 }) }
-}
-
 module.exports = {
   sphere_12,
   sphere_36,
   sphere_72,
   sphere_144,
   sphere_360
-//  sphere_720
 }

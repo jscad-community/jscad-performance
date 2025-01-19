@@ -35,18 +35,10 @@ const roundedCylinder_360 = {
   func: function runme () { return CSG.roundedCylinder({ radius: 100, roundradius: 10, resolution: 360 }) }
 }
 
-const roundedCylinder_720 = {
-  name: 'CSG.roundedCylinder(resolution: 720)',
-  api: 'roundedCylinder',
-  div: '720',
-  func: function runme () { return CSG.roundedCylinder({ radius: 100, roundradius: 10, resolution: 720 }) }
-}
-
 module.exports = {
   roundedCylinder_12,
   roundedCylinder_36,
   roundedCylinder_72,
   roundedCylinder_144,
   roundedCylinder_360
-//  roundedCylinder_720
 }

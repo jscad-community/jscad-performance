@@ -35,18 +35,10 @@ const roundedCube_360 = {
   func: function runme () { return CSG.roundedCube({ radius: 100, roundedradius: 10, resolution: 360 }) }
 }
 
-const roundedCube_720 = {
-  name: 'CSG.roundedCube(resolution: 720)',
-  api: 'roundedCube',
-  div: '720',
-  func: function runme () { return CSG.roundedCube({ radius: 100, roundedradius: 10, resolution: 720 }) }
-}
-
 module.exports = {
   roundedCube_12,
   roundedCube_36,
   roundedCube_72
-//  roundedCube_144
-//  roundedCube_360
-//  roundedCube_720
+//  roundedCube_144, // TOO HEAVY
+//  roundedCube_360, // TOO HEAVY
 }

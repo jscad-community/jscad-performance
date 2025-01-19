@@ -113,6 +113,7 @@ const union_sphere_10000 = {
 
 module.exports = {
   setupUnion,
+
   union_circle_100,
   union_circle_500,
   union_circle_1000,

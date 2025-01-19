@@ -35,6 +35,7 @@ let circles_1000 = null // 100 points X centers
 let circles_5000 = null // 500 points X centers
 let circles_10000 = null // 1000 points X centers
 
+let spheres_600 = null // 72 points X centers
 let spheres_1000 = null // 98 points X centers
 let spheres_10000 = null // 1012 points X centers
 
@@ -48,6 +49,7 @@ const setupIntersect = {
     circles_1000 = centers2D.map((center) => translate(center, circle({ radius: 100, segments: 100 })))
     circles_5000 = centers2D.map((center) => translate(center, circle({ radius: 100, segments: 500 })))
     circles_10000 = centers2D.map((center) => translate(center, circle({ radius: 100, segments: 1000 })))
+
     spheres_600 = centers3D.map((center) => translate(center, sphere({ radius: 100, segments: 6 })))
     spheres_1000 = centers3D.map((center) => translate(center, sphere({ radius: 100, segments: 8 })))
     spheres_10000 = centers3D.map((center) => translate(center, sphere({ radius: 100, segments: 26 })))

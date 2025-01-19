@@ -8,7 +8,6 @@ let circle_10000 = null // 10000 points
 let sphere_7 = null // 98 points
 let sphere_22 = null // 1012 points
 let sphere_70 = null // 9940 points
-let sphere_158 = null // 50244 points
 let sphere_224 = null // 99904 points
 
 const setupArea = {
@@ -24,7 +23,6 @@ const setupArea = {
     sphere_7 = primitives.sphere({ radius: 100, segments: 7 })
     sphere_22 = primitives.sphere({ radius: 100, segments: 22 })
     sphere_70 = primitives.sphere({ radius: 100, segments: 70 })
-    sphere_158 = primitives.sphere({ radius: 100, segments: 158 })
     sphere_224 = primitives.sphere({ radius: 100, segments: 224 })
     return {}
   }
