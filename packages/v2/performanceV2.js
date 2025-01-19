@@ -100,7 +100,7 @@ entries.forEach((entry) => {
     const div = test.div
     const performance = test.func
 
-    console.log('Test: ' + name + ' (' + api + ',' + div + ')')
+    // console.log('Test: ' + name + ' (' + api + ',' + div + ')')
 
     let samples = 0
     let maxsamples = 1000
