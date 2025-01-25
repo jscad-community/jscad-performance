@@ -3,7 +3,6 @@ components/
 coverage/
 .DS_Store
 .nyc_output
-packages/web/examples
 package-lock.json
 *.log
 *.swp
