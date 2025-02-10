@@ -1,5 +1,4 @@
 const { CSG, CAG } = require('@jscad/csg')
-const api = require('@jscad/csg/src/api/index')
 
 let arc_16 = null // 10 points
 let arc_196 = null // 100 points

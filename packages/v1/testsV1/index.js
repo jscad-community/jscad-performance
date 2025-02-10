@@ -4,12 +4,12 @@ const circles = require('./circles.js')
 const cylinders = require('./cylinders.js')
 const roundedCubes = require('./roundedCubes.js')
 const roundedCylinders = require('./roundedCylinders.js')
-// FIXME const rounedRectangles
+const roundedRectangles = require('./roundedRectangles.js')
 const spheres = require('./spheres.js')
 
 // geometries - path2
-// FIXME const appendArc = require('./appendArc')
-// FIXME const appendBezier = require('./appendBezier')
+const appendArc = require('./appendArc.js')
+const appendBezier = require('./appendBezier.js')
 
 // measurements
 const measureArea = require('./measureArea')
@@ -37,7 +37,8 @@ const extrudeRotate = require('./extrudeRotate')
 const hull = require('./hull')
 
 const allExports = Object.assign({},
-  arcs, circles, cylinders, roundedCylinders, roundedCubes, spheres,
+  arcs, circles, cylinders, roundedCylinders, roundedCubes, roundedRectangles, spheres,
+  appendArc, appendBezier,
   measureArea, measureBounds, measureVolume,
   intersect, subtract, union,
   expand,

@@ -1,5 +1,4 @@
 const { CAG, CSG } = require('@jscad/csg')
-const { hull } = require('@jscad/csg/src/api/ops-transformations')
 
 const centers2D = [
   [0, 0, 0],
@@ -51,25 +50,30 @@ const setupHull = {
   }
 }
 
+const dohull = (cags) => {
+  const { hull } = require('@jscad/csg/src/api/ops-transformations')
+  return hull(cags)
+}
+
 const hull_circle_100 = {
   name: 'hull(100)',
   api: 'hull(circle)',
   div: '100',
-  func: function runme () { return hull(circles_100) }
+  func: function runme () { return dohull(circles_100) }
 }
 
 const hull_circle_1000 = {
   name: 'hull(1000)',
   api: 'hull(circle)',
   div: '1000',
-  func: function runme () { return hull(circles_1000) }
+  func: function runme () { return dohull(circles_1000) }
 }
 
 const hull_circle_10000 = {
   name: 'hull(10000)',
   api: 'hull(circle)',
   div: '10000',
-  func: function runme () { return hull(circles_10000) }
+  func: function runme () { return dohull(circles_10000) }
 }
 
 const hull_sphere_1000 = {
