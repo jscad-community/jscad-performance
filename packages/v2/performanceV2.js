@@ -89,7 +89,6 @@ if (!global.gc) {
 const entries = Object.entries(tests)
 entries.forEach((entry) => {
   // setup the performance test
-  // if (entry && (typeof(entry[1]) === 'function')) {
   if (entry) {
     const item = entry[0]
     const test = entry[1]
@@ -110,37 +109,40 @@ entries.forEach((entry) => {
 
     if (api === 'setup') maxsamples = 1
 
-    while (samples < maxsamples) {
-      const startusage = process.memoryUsage()
-      const starttime = microtime.now()
+    try {
+      while (samples < maxsamples) {
+        const startusage = process.memoryUsage()
+        const starttime = microtime.now()
 
-      const result = performance()
+        const result = performance()
 
-      const endtime = microtime.now()
-      const endusage = process.memoryUsage()
+        const endtime = microtime.now()
+        const endusage = process.memoryUsage()
 
-      const timing = (endtime - starttime) / MICROPERSECOND
-      timings.push(timing)
-      totalElapse += timing
+        const timing = (endtime - starttime) / MICROPERSECOND
+        timings.push(timing)
+        totalElapse += timing
 
-      let rss = endusage.rss - startusage.rss
-      let heap = endusage.heapUsed - startusage.heapUsed
-      if (rss < 0) rss = 0
-      if (heap < 0) heap = 0
-      allocations.push({ rss: rss, heap: heap })
+        let rss = endusage.rss - startusage.rss
+        let heap = endusage.heapUsed - startusage.heapUsed
+        if (rss < 0) rss = 0
+        if (heap < 0) heap = 0
+        allocations.push({ rss: rss, heap: heap })
 
-      samples++
-    }
+        samples++
+      }
 
-    if (maxsamples > 1) {
-      // crunch the timings and the allocations
-      const usage = calculateUsage(allocations)
-      const meanrss = Math.floor(usage.rssMean)
+      if (maxsamples > 1) {
+        // crunch the timings and the allocations
+        const usage = calculateUsage(allocations)
+        const meanrss = Math.floor(usage.rssMean)
 
-      const stats = calculateStatistics(timings)
-      const meanms = stats.mean
+        const stats = calculateStatistics(timings)
+        const meanms = stats.mean
 
-      console.log(api + ',' + div + ',' + samples + ',' + meanms + ',' + meanrss)
+        console.log(api + ',' + div + ',' + samples + ',' + meanms + ',' + meanrss)
+      }
+    } catch (TypeError) {
     }
   }
 })
