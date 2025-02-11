@@ -21,29 +21,29 @@ const setupExtrudeRectangular = {
 // EXTRUDE...
 
 const extrudeRectangular_arc_10 = {
-  name: 'extrudeRectangular(10arc)',
-  api: 'extrudeRectangular(10arc)',
+  name: 'extrudeRectangular(arc)',
+  api: 'extrudeRectangular(arc)',
   div: '10',
   func: function runme () { return arc_16.rectangularExtrude(3, 10, 8) }
 }
 
 const extrudeRectangular_arc_100 = {
-  name: 'extrudeRectangular(100arc)',
-  api: 'extrudeRectangular(100arc)',
+  name: 'extrudeRectangular(arc)',
+  api: 'extrudeRectangular(arc)',
   div: '100',
   func: function runme () { return arc_196.rectangularExtrude(3, 10, 8) }
 }
 
 const extrudeRectangular_arc_200 = {
-  name: 'extrudeRectangular(200arc)',
-  api: 'extrudeRectangular(200arc)',
+  name: 'extrudeRectangular(arc)',
+  api: 'extrudeRectangular(arc)',
   div: '200',
   func: function runme () { return arc_396.rectangularExtrude(3, 10, 8) }
 }
 
 const extrudeRectangular_arc_400 = {
-  name: 'extrudeRectangular(400arc)',
-  api: 'extrudeRectangular(400arc)',
+  name: 'extrudeRectangular(arc)',
+  api: 'extrudeRectangular(arc)',
   div: '400',
   func: function runme () { return arc_796.rectangularExtrude(3, 10, 8) }
 }
@@ -54,5 +54,7 @@ module.exports = {
   extrudeRectangular_arc_10,
   extrudeRectangular_arc_100,
   extrudeRectangular_arc_200
-  // extrudeRectangular_arc_400,
+  extrudeRectangular_arc_400,
+
+  // FIXME missing extrudeRectangular of circle
 }
