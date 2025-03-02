@@ -13,7 +13,6 @@ export const _setupProject = {
     sphere7 = sphere({ radius: 100, segments: 7 })
     sphere22 = sphere({ radius: 100, segments: 22 })
     sphere70 = sphere({ radius: 100, segments: 70 })
-    sphere224 = sphere({ radius: 100, segments: 224 })
     return {}
   }
 }
@@ -37,11 +36,4 @@ export const projectSphere10000 = {
   api: 'project(sphere)',
   div: '10000',
   func: function runme () { return project({}, sphere70) }
-}
-
-export const projectSphere100000 = {
-  name: 'project(100000)',
-  api: 'project(sphere)',
-  div: '100000',
-  func: function runme () { return project({}, sphere224) }
 }

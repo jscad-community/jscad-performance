@@ -56,35 +56,35 @@ export const _setupScission = {
   }
 }
 
-export const scissionCircle100 = {
+const scissionCircle100 = {
   name: 'scission(100)',
   api: 'scission(circle)',
   div: '100',
   func: function runme () { return scission(circles100) }
 }
 
-export const scissionCircle500 = {
+const scissionCircle500 = {
   name: 'scission(500)',
   api: 'scission(circle)',
   div: '500',
   func: function runme () { return scission(circles500) }
 }
 
-export const scissionCircle1000 = {
+const scissionCircle1000 = {
   name: 'scission(1000)',
   api: 'scission(circle)',
   div: '1000',
   func: function runme () { return scission(circles1000) }
 }
 
-export const scissionCircle5000 = {
+const scissionCircle5000 = {
   name: 'scission(5000)',
   api: 'scission(circle)',
   div: '5000',
   func: function runme () { return scission(circles5000) }
 }
 
-export const scissionCircle10000 = {
+const scissionCircle10000 = {
   name: 'scission(10000)',
   api: 'scission(circle)',
   div: '10000',

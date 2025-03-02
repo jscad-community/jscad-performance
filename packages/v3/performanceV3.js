@@ -138,7 +138,7 @@ entries.forEach((entry) => {
       const meanrss = Math.floor(usage.rssMean)
 
       const stats = calculateStatistics(timings)
-      const meanms = stats.mean
+      const meanms = stats.mean.toFixed(8)
 
       console.log(api + ',' + div + ',' + samples + ',' + meanms + ',' + meanrss)
     }
