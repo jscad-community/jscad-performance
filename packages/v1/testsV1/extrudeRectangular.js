@@ -53,7 +53,7 @@ module.exports = {
 
   extrudeRectangular_arc_10,
   extrudeRectangular_arc_100,
-  extrudeRectangular_arc_200
+  extrudeRectangular_arc_200,
   extrudeRectangular_arc_400,
 
   // FIXME missing extrudeRectangular of circle
