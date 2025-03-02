@@ -13,7 +13,8 @@ import sqlite3
 #
 # GLOBAL variables
 #
-homeDir = '/Users/zdev/dev/mamp/apache2/htdocs/jscad/jscad-performance'
+#homeDir = '/Users/zdev/dev/mamp/apache2/htdocs/jscad/jscad-performance'
+homeDir = '/Users/z3dev/dev/performance/jscad-performance'
 templatePath  = homeDir + '/template.html'
 indexPath = homeDir + '/index.html'
 
@@ -37,6 +38,18 @@ def getListOfDates() :
 
 #------------------------------------------------------------
 #------------------------------------------------------------
+def getListOfVersions() :
+  # load the list of unique dates
+  dbcursor = dbconn.cursor()
+  dbcursor.execute('select distinct(version) from daily order by date')
+  dbresults = dbcursor.fetchall()
+  listofversions = ''
+  for dbrow in dbresults :
+    listofversions = listofversions + '"' + dbrow[0] + '", '
+  return listofversions
+
+#------------------------------------------------------------
+#------------------------------------------------------------
 def getDataSet(chindex, name, dsindex, weight) :
   configId = 'config{:02}'.format(chindex)
   dsId = 'dataset{:02}{:02}'.format(chindex, dsindex)
@@ -48,7 +61,7 @@ def getDataSet(chindex, name, dsindex, weight) :
   dataset += '  label: "{0} {1}",\n'.format(name, weight)
   dataset += '  data: ['
   for dbrow in dbresults :
-    dataset += '{0}, '.format(dbrow[0])
+    dataset += '{0:.8f}, '.format(dbrow[0])
   # add the binding between dataset and configuration
   dataset += ']\n'
   dataset += '}\n'
@@ -107,6 +120,7 @@ print 'Loading JSCAD Performace Statistics:',xtoday
 dbconn = sqlite3.connect( dbPath )
 
 listofdates_re  = re.compile( '.*(__LIST_OF_DATES__)' )
+listofversions_re  = re.compile( '.*(__LIST_OF_VERSIONS__)' )
 listofcharts_re = re.compile( '.*(__LIST_OF_CHARTS__)' )
 
 with codecs.open( templatePath, mode='rt', encoding='utf-8' ) as inputfile :
@@ -119,6 +133,13 @@ with codecs.open( templatePath, mode='rt', encoding='utf-8' ) as inputfile :
       if xmatch:
         macro = xmatch.group(1)
         outputfile.write(re.sub(macro, getListOfDates(), line))
+        continue
+
+      # replace list of versions
+      xmatch = listofversions_re.match( line )
+      if xmatch:
+        macro = xmatch.group(1)
+        outputfile.write(re.sub(macro, getListOfVersions(), line))
         continue
 
       # replace list of charts

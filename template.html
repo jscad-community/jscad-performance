@@ -3,7 +3,7 @@
 
 <head>
   <title>JSCAD Performance</title>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <style>
     canvas{
       -moz-user-select: none;
@@ -71,6 +71,11 @@ const addConfig = (title) => {
 }
 
 const addDataset = (config, statistics) => {
+  // pad the statistics to match the number of labels
+  while (config.data.labels.length > statistics.data.length) {
+    statistics.data.unshift(null)
+  }
+
   const color = window.chartColors[config.data.datasets.length]
   const dataset = {
     label: statistics.label,
@@ -87,6 +92,11 @@ const None = NaN // null values
 <!-- list of dates -->
 const listOfDates = [
   __LIST_OF_DATES__
+]
+
+<!-- list of versions -->
+const listOfVersions = [
+  __LIST_OF_VERSIONS__
 ]
 </script>
 

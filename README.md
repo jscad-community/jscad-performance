@@ -52,7 +52,7 @@ sqlite3 jscad.stats.db
 
 The database tables are:
 ```
-CREATE TABLE daily (date TEXT, name TEXT, weight INTEGER, interations INTEGER, average NUMERIC, allocation INTEGER);
+CREATE TABLE daily (revision TEXT, version TEXT, date TEXT, name TEXT, weight INTEGER, interations INTEGER, average NUMERIC, allocation INTEGER);
 CREATE TABLE environment (date TEXT, hostname TEXT, hardware TEXT, os TEXT, node TEXT);
 ```
 
