@@ -15,15 +15,12 @@ const centers2D = [
 
 const centers3D = [
   [0, 0, 0],
-  [10, 10, 10],
-  [20, 20, 20],
-  [30, 30, 30],
-  [40, 40, 40],
-  [50, 50, 50],
-  [60, 60, 60],
-  [70, 70, 70],
-  [80, 80, 80],
-  [90, 90, 90]
+  [0, 0, 15],
+  [0, 15, 0],
+  [15, 0, 0],
+  [0, 0, -15],
+  [0, -15, 0],
+  [-15, 0, 0],
 ]
 
 let circles100 = null // 10 points X centers
@@ -47,9 +44,9 @@ export const _setupSubtract = {
     circles5000 = centers2D.map((center) => translate(center, circle({ radius: 100, segments: 500 })))
     circles10000 = centers2D.map((center) => translate(center, circle({ radius: 100, segments: 1000 })))
 
-    spheres600 = centers3D.map((center) => translate(center, sphere({ radius: 100, segments: 6 })))
-    spheres1000 = centers3D.map((center) => translate(center, sphere({ radius: 100, segments: 8 })))
-    spheres10000 = centers3D.map((center) => translate(center, sphere({ radius: 100, segments: 26 })))
+    spheres600 = centers3D.map((center) => translate(center, sphere({ radius: 10, segments: 8 })))
+    spheres1000 = centers3D.map((center) => translate(center, sphere({ radius: 10, segments: 16 })))
+    spheres10000 = centers3D.map((center) => translate(center, sphere({ radius: 10, segments: 32 })))
 
     return {}
   }

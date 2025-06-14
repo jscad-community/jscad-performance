@@ -18,15 +18,12 @@ const centers2D = [
 
 const centers3D = [
   [0, 0, 0],
-  [10, 10, 10],
-  [20, 20, 20],
-  [30, 30, 30],
-  [40, 40, 40],
-  [50, 50, 50],
-  [60, 60, 60],
-  [70, 70, 70],
-  [80, 80, 80],
-  [90, 90, 90]
+  [0, 0, 15],
+  [0, 15, 0],
+  [15, 0, 0],
+  [0, 0, -15],
+  [0, -15, 0],
+  [-15, 0, 0],
 ]
 
 let circles_100 = null // 10 points X centers
@@ -50,9 +47,9 @@ const setupUnion = {
     circles_5000 = centers2D.map((center) => translate(center, circle({ radius: 100, segments: 500 })))
     circles_10000 = centers2D.map((center) => translate(center, circle({ radius: 100, segments: 1000 })))
 
-    spheres_600 = centers3D.map((center) => translate(center, sphere({ radius: 100, segments: 6 })))
-    spheres_1000 = centers3D.map((center) => translate(center, sphere({ radius: 100, segments: 8 })))
-    spheres_10000 = centers3D.map((center) => translate(center, sphere({ radius: 100, segments: 26 })))
+    spheres_600 = centers3D.map((center) => translate(center, sphere({ radius: 10, segments: 8 })))
+    spheres_1000 = centers3D.map((center) => translate(center, sphere({ radius: 10, segments: 16 })))
+    spheres_10000 = centers3D.map((center) => translate(center, sphere({ radius: 10, segments: 32 })))
 
     return {}
   }

@@ -15,15 +15,12 @@ const centers2D = [
 
 const centers3D = [
   [0, 0, 0],
-  [10, 10, 10],
-  [20, 20, 20],
-  [30, 30, 30],
-  [40, 40, 40],
-  [50, 50, 50],
-  [60, 60, 60],
-  [70, 70, 70],
-  [80, 80, 80],
-  [90, 90, 90]
+  [1, 1, 1],
+  [2, 2, 2],
+  [3, 3, 3],
+  [4, 4, 4],
+  [5, 5, 5],
+  [6, 6, 6],
 ]
 
 let circles_100 = null // 10 points X centers
@@ -47,9 +44,9 @@ const setupIntersect = {
     circles_5000 = centers2D.map((center) => CAG.circle({ radius: 100, resolution: 500, center: center }))
     circles_10000 = centers2D.map((center) => CAG.circle({ radius: 100, resolution: 1000, center: center }))
 
-    spheres_600 = centers3D.map((center) => CSG.sphere({ radius: 100, resolution: 6, center: center }))
-    spheres_1000 = centers3D.map((center) => CSG.sphere({ radius: 100, resolution: 8, center: center }))
-    spheres_10000 = centers3D.map((center) => CSG.sphere({ radius: 100, resolution: 26, center: center }))
+    spheres_600 = centers3D.map((center) => CSG.sphere({ radius: 10, resolution: 8, center: center }))
+    spheres_1000 = centers3D.map((center) => CSG.sphere({ radius: 10, resolution: 16, center: center }))
+    spheres_10000 = centers3D.map((center) => CSG.sphere({ radius: 10, resolution: 32, center: center }))
     return {}
   }
 }
